@@ -1,0 +1,14 @@
+@model List<PokemonClass>
+
+@{
+    ViewBag.Title = "Pokemon List";
+}
+
+@foreach (var pokemon in Model)
+{
+    <div>
+        <h2>@pokemon.name</h2>
+        <p>@pokemon.types[0].tipo.name</p>
+        <p>@pokemon.id</p>
+    </div>
+}
