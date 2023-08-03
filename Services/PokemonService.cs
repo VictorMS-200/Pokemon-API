@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Text.Json;
 using Pokemon.Models;
 
@@ -6,24 +7,30 @@ namespace Pokemon.Services;
 
 public class PokemonService
 {
+    private static int confirm = 0; // Confirm if the list is already filled
     private static List<PokemonClass> pokemonList = new List<PokemonClass>();
 
-    public static List<PokemonClass> GetPokemonList()
+    public static async Task<List<PokemonClass>> GetPokemonList()
     {
-        using(var client = new HttpClient())
+        if (confirm == 1)
+        {
+            return pokemonList;
+        }
+
+        using (var client = new HttpClient())
         {
             try
             {
-                for (int i = 1; i <= 5; i++)
+                for (int i = 1; i <= 50; i++)
                 {
-                    var response = client.GetAsync($"https://pokeapi.co/api/v2/pokemon/{i}").Result;
 
-                    var content = response.Content.ReadAsStringAsync().Result;
-                    var pokemon = JsonSerializer.Deserialize<PokemonClass>(content);
+                    var response = await client.GetStringAsync($"https://pokeapi.co/api/v2/pokemon/{i.ToString()}");
+                    var pokemon = JsonSerializer.Deserialize<PokemonClass>(response);
 
                     pokemonList.Add(pokemon!);
                 }
 
+                confirm++;
                 return pokemonList;
             }
             catch (Exception e)
@@ -31,6 +38,12 @@ public class PokemonService
                 Console.WriteLine($"Error: {e.Message}");
                 throw;
             }
+            
         }
+    }
+
+    public static PokemonClass GetPokemon(int id)
+    {
+        return pokemonList[id];
     }
 }

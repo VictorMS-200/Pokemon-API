@@ -12,9 +12,9 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult PokemonList()
+    public async Task<IActionResult> PokemonList()
     {
-        var pokemonList = PokemonService.GetPokemonList();
+        var pokemonList = await PokemonService.GetPokemonList();
         return View(pokemonList);
     }
 

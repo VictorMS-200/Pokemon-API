@@ -7,7 +7,7 @@ This project was made with the purpose of learning how to use the [PokeAPI](http
 
 ## How to use?
 
-First of all you need to have the .NET SDK installed on your machine. You can download it <a href="https://dotnet.microsoft.com/download/dotnet/5.0">here</a>. After that, you can clone this repository and run the projects in your IDE. I recommend using Visual Studio Code or Visual Studio Community.
+You need to have the .NET SDK installed on your machine. You can download it <a href="https://dotnet.microsoft.com/download/dotnet/5.0">here</a>. After that, you can clone this repository and run the projects in your IDE. I recommend using Visual Studio Code or Visual Studio Community.
 
 After cloning the repository, you need to install the dependencies. To do this, you need to run the following command in the terminal:
 

@@ -2,13 +2,29 @@
 
 @{
     ViewBag.Title = "Pokemon List";
+    ViewData["Information"] = "Pokemon List page";
+    ViewData["Description"] = "This page is a list of all the pokemon, with their name, id and sprite. Choose a pokemon to see more information about it.";
 }
 
-@foreach (var pokemon in Model)
-{
-    <div>
-        <h2>@pokemon.name</h2>
-        <p>@pokemon.types[0].tipo.name</p>
-        <p>@pokemon.id</p>
-    </div>
-}
+<div class="row row-cols-1 row-cols-md-5 g-4">
+    @foreach (var pokemon in Model)
+    {
+        <div class="col">
+            <div class="card" style="border-radius: 0.5em;">
+                <img src="@pokemon.sprite.FrontDefault" class="card-img-top" alt="" width="10" height="100%">
+                <div class="card-body">
+                    <h5 class="card-title text-capitalize text-center">@pokemon.name</h5>
+                    <p class="card-text"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Id:</strong> @pokemon.id</li>
+                    <li class="list-group-item"><strong>Type:</strong> @pokemon.types[0].type.name</li>
+                    <li class="list-group-item"><strong>Ability:</strong> @pokemon.abilities[0].ability.name</li>
+                </ul>
+                <div class="card-footer d-grid gap-2">
+                    <a asp-action="PokemonList" asp-controller="Home" class="btn btn-success">View</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

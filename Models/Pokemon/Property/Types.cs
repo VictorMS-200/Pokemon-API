@@ -5,7 +5,7 @@ namespace Pokemon.Models;
 public class Types
 {
     [JsonPropertyName("type")]
-		public TypeName tipo { get; set; }
+		public TypeName type { get; set; }
 
     public class TypeName
     {

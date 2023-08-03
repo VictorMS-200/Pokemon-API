@@ -13,7 +13,7 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/25.gif" alt="" width="40" height="40" class="d-inline-block align-text-top">
-                <a class="navbar-brand" asp-area="" asp-controller="Pokemon" asp-action="Index">Pokemon.Api</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Pokemon.Api</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="verpokemons">Pokemon</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="PokemonList">Pokemon</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Home" asp-action="Privacy">Privacy</a>
@@ -33,8 +33,8 @@
     </header>
     <div class="container-fluid mt-4">
         <main role="main" class="pb-5">
-            <h1 class="text-center">@ViewData["Informacoes"]</h1>
-            <p class="text-center">@ViewData["subtitulo"]</p>
+            <h1 class="text-center">@ViewData["Information"]</h1>
+            <p class="text-center">@ViewData["Description"]</p>
             <hr>
                 @RenderBody()
         </main>
@@ -42,7 +42,7 @@
 
     <footer class="text-light bg-dark p-3 fixed-bottom text-center position-absolute">
         <div class="">
-            &copy; @DateTime.Now.Year  - Pokemon.API <br><a asp-controller="Pokemon" asp-action="Privacy">Privacy</a>
+            Pokemon.API - &copy; @DateTime.Now.Year<br><a asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
