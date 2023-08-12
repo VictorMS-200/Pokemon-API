@@ -21,7 +21,8 @@ public class PokemonService
         {
             try
             {
-                for (int i = 1; i <= 50; i++)
+                // Define the list of Pokemons 
+                for (int i = 1; i <= 151; i++)
                 {
 
                     var response = await client.GetStringAsync($"https://pokeapi.co/api/v2/pokemon/{i.ToString()}");

@@ -1,8 +1,13 @@
-# Pokemon-API
-<img src="https://img.shields.io/badge/dotnet_version-7.0.305-green">
-<img src="https://img.shields.io/badge/Language-English-red">
+<div align="center">
+    <h1 align="center">Pokemon-API</h1>
+	<img height="150" src="./doc/pokeapi.svg" alt="PokemonAPI">
+</div>
+<div align="center" >
+    <img src="https://img.shields.io/badge/dotnet_version-7.0.305-green">
+    <img src="https://img.shields.io/badge/Language-English-red">
+</div>
 
-## Fist of all
+## First of all
 This project was made with the purpose of learning how to use the [PokeAPI](https://pokeapi.co/), and the [Asp.Net Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-5.0) framework. For this reason, it is not a complete project, and it is not intended to be used in production, just for learning purposes.
 
 ## How to use?
@@ -26,3 +31,11 @@ If you want to run with hot reload (the server will restart automatically when y
 ```bash
 dotnet watch run
 ```
+
+After that, the application will be runnig on the **localhost:5059**
+
+<div align="center">
+	<img height="400" src="./doc/App.gif" alt="PokemonAPI">
+</div> 
+
+If you wanna alter the quantity of Pokemons in the application, you can change the value of the FOR LOOP in *Services/PokemonService.cs*
