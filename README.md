@@ -2,8 +2,9 @@
     <h1 align="center">Pokemon-API</h1>
 </div>
 <div align="center" >
-  <img src="https://img.shields.io/badge/dotnet_version-7.0.305-green">
-  <img src="https://img.shields.io/badge/Language-English-red">
+    <img src="https://img.shields.io/badge/dotnet_version-7.0.305-green">
+    <img src="https://img.shields.io/badge/Language-English-red">
+    <img src="./image/">
 </div>
 ## Fist of all
 This project was made with the purpose of learning how to use the [PokeAPI](https://pokeapi.co/), and the [Asp.Net Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-5.0) framework. For this reason, it is not a complete project, and it is not intended to be used in production, just for learning purposes.
